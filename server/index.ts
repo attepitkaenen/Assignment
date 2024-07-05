@@ -1,12 +1,13 @@
 import { fastify, FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
 import got from 'got';
+import { Restaurant } from "shared/models/restaurant.model";
 
 
 const app: FastifyInstance = fastify({
     logger: true
 });
 
-export const getAllRestaurants = async () => {
+export const getAllRestaurants = async (): Promise<Restaurant[] | undefined> => {
     try {
         const res = await got
             .post('https://places.googleapis.com/v1/places:searchNearby', {
@@ -24,29 +25,29 @@ export const getAllRestaurants = async () => {
                   },
                   headers: {
                     'Content-Type': 'application/json',
-                    'X-Goog-Api-Key': 'AIzaSyALYGdAbjfG41Ia4l8j2ZGAz-eJDF82ucg',
+                    'X-Goog-Api-Key': 'AIzaSyC3RfG3w1CfXIx6RTs565y_PHkClo6zJg8',
                     'X-Goog-FieldMask': 'places.id,places.displayName,places.types'
                   }
             })
             .json();
-        return res;
+        return res as Restaurant[];
     } catch (err) {
         console.log(err);
     }
 }
 
-export const getRestaurantById = async (id: string) => {
+export const getRestaurantById = async (id: string): Promise<Restaurant | undefined> => {
     try {
         const res = await got
             (`https://places.googleapis.com/v1/places/${id}`, {
                   headers: {
                     'Content-Type': 'application/json',
-                    'X-Goog-Api-Key': 'AIzaSyALYGdAbjfG41Ia4l8j2ZGAz-eJDF82ucg',
+                    'X-Goog-Api-Key': 'AIzaSyC3RfG3w1CfXIx6RTs565y_PHkClo6zJg8',
                     'X-Goog-FieldMask': 'id,displayName,types'
                   }
             })
             .json();
-        return res;
+        return res as Restaurant;
     } catch (err) {
         console.log(err);
     }
@@ -70,7 +71,7 @@ app.register(restaurantRoutes, {prefix: '/api/restaurants'});
 
 const main = async () => {
     await app.listen({
-        port: 3000,
+        port: 4000,
         host: "0.0.0.0",
     });
 }

@@ -1,4 +1,9 @@
 
 export type Restaurant = {
-    name: string
+    id: string,
+    types: string[],
+    displayName: {
+      text: string,
+      languageCode: string
+    }
 }
