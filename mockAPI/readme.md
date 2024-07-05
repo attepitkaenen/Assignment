@@ -1,0 +1,1 @@
+To use the mock data install json-server globally using "npm i json-server -g" and then start the local server with the command "json-server --watch --port 4000 ./data.json"
