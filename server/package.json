@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/type-provider-typebox": "^4.0.0",
+    "@sinclair/typebox": "^0.32.34",
     "dotenv": "^16.4.5",
     "fastify": "^4.28.1",
     "got": "^14.4.1"
