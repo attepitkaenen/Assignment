@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="p-1 flex justify-center">
-          <div className="flex flex-col bg-black rounded-xl h-[98vh] w-[98vw]">
+          <div className="flex flex-col bg-black rounded-xl min-h-[98vh] w-[98vw]">
             <Navbar/>
             {children}
           </div>
