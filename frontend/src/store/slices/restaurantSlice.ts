@@ -58,22 +58,9 @@ const fetchRestaurants = async () => {
 
 export const { getRestaurants } = restaurantSlice.actions;
 
-const getRes = (state: RestaurantState) => state.restaurants;
-const getRestaurantId = (_: RestaurantState, restaurantId: string) => restaurantId;
+export const selectRestaurants = (state: RestaurantState) => state.restaurants;
 
-export const selectRestaurants = createSelector(
-  [getRes], 
-  (restaurants: Restaurant[]) => {
-    return restaurants;
-})
-
-export const selectRestaurantById = createSelector(
-  [getRes, getRestaurantId],
-  (restaurants: Restaurant[], id: string) => {
-    return restaurants.find(res => res.id === id)
-  }
-)
-
-
+export const selectRestaurantById = (state: RestaurantState, restaurantId: string) =>
+  state.restaurants.find((restaurant : Restaurant) => restaurant.id === restaurantId);
 
 export default restaurantSlice.reducer;
