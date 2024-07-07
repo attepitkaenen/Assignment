@@ -1,7 +1,4 @@
-import { createSlice, configureStore, PayloadAction, createAsyncThunk, buildCreateSlice, asyncThunkCreator, createSelector } from '@reduxjs/toolkit'
-import { RootState } from '@reduxjs/toolkit/query'
-import axios from 'axios'
-
+import { buildCreateSlice, asyncThunkCreator, createSelector } from '@reduxjs/toolkit'
 
 type Restaurant = {
     id: string,
@@ -50,10 +47,7 @@ const restaurantSlice = createAppSlice({
           },
         },
       ),
-  }),
-  selectors: {
-    selectRestaurants: (state) => state.restaurants
-  }
+  })
 })
 
 const fetchRestaurants = async () => {
@@ -63,19 +57,23 @@ const fetchRestaurants = async () => {
 }
 
 export const { getRestaurants } = restaurantSlice.actions;
-export const { selectRestaurants } = restaurantSlice.selectors;
 
-const getRes = (state: any) => state.restaurants;
-const getResId = (_: RestaurantState, restaurantId: string) => restaurantId;
+const getRes = (state: RestaurantState) => state.restaurants;
+const getRestaurantId = (_: RestaurantState, restaurantId: string) => restaurantId;
+
+export const selectRestaurants = createSelector(
+  [getRes], 
+  (restaurants: Restaurant[]) => {
+    return restaurants;
+})
 
 export const selectRestaurantById = createSelector(
-  [getRes, getResId],
+  [getRes, getRestaurantId],
   (restaurants: Restaurant[], id: string) => {
-    console.log(restaurants);
-    console.log(id);
-    // return restaurants.find(res => res.id === id)
+    return restaurants.find(res => res.id === id)
   }
 )
+
 
 
 export default restaurantSlice.reducer;

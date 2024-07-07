@@ -3,7 +3,7 @@ import restaurantReducer from "./slices/restaurantSlice";
 
 export const makeStore = () => {
     return configureStore({
-      reducer: { restaurants: restaurantReducer },
+      reducer: restaurantReducer,
     });
 };
 

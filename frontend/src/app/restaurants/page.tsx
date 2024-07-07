@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 
 
 export default function Restaurants() {
-    const restaurants = useSelector(selectRestaurants);
+    const restaurants = useAppSelector(selectRestaurants);
     const dispatch = useAppDispatch();
     useEffect(() => {
         dispatch(getRestaurants())
