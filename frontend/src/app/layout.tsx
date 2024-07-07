@@ -4,6 +4,7 @@ import "./globals.css";
 
 // components
 import Navbar from "./components/navbar";
+import StoreProvider from "./storeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,12 +21,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="p-1 flex justify-center">
-          <div className="flex flex-col bg-black rounded-xl min-h-[98vh] w-[98vw]">
-            <Navbar/>
-            {children}
+        <StoreProvider>
+          <div className="p-1 flex justify-center">
+            <div className="flex flex-col bg-black rounded-xl min-h-[98vh] w-[98vw]">
+              <Navbar/>
+              {children}
+            </div>
           </div>
-        </div>
+        </StoreProvider>
       </body>
     </html>
   );
