@@ -4,7 +4,6 @@ import RestaurantCard from "./restaurantCard";
 import { useEffect } from "react";
 import { getRestaurants, selectRestaurants } from "@/store/slices/restaurantSlice";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
-import { useSelector } from "react-redux";
 
 
 

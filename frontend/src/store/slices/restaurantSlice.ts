@@ -1,6 +1,6 @@
 import { buildCreateSlice, asyncThunkCreator, createSelector } from '@reduxjs/toolkit'
 
-type Restaurant = {
+export type Restaurant = {
     id: string,
     types: string[],
     displayName: {
