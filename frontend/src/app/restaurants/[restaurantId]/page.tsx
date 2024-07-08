@@ -48,7 +48,7 @@ export default function RestaurantDetail({ params }: { params: { restaurantId: s
           
         </>
       ) : (
-        <div>loading...</div>
+        <div className="text-center">loading...</div>
       )}
     </div>
   );

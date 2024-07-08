@@ -18,7 +18,7 @@ export default function Restaurants() {
         </div>
         ) :
         (
-            <div>loading...</div>
+            <div className="text-center">loading...</div>
         )
     )
 }
