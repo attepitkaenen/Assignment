@@ -1,26 +1,22 @@
 'use client'
 
 import RestaurantCard from "./restaurantCard";
-import { useEffect } from "react";
-import { getRestaurants, selectRestaurants } from "@/store/slices/restaurantSlice";
-import { useAppDispatch, useAppSelector } from "@/store/hooks";
+import { useGetRestaurantsQuery } from "@/store/api/restaurantApi";
 
 
 
 export default function Restaurants() {
-    const restaurants = useAppSelector(selectRestaurants);
-    const dispatch = useAppDispatch();
-    useEffect(() => {
-        dispatch(getRestaurants())
-    }, []);
+    const { data: restaurants, error, isLoading } = useGetRestaurantsQuery();
 
     return (
         restaurants ?
-        (<div className='grid grid-cols-2 gap-2 p-2'>
+        (
+        <div className='grid grid-cols-2 gap-2 p-2'>
             {restaurants.map((restaurant) => (
                 <RestaurantCard key={restaurant.id} restaurant={restaurant}/>
             ))}
-        </div>) :
+        </div>
+        ) :
         (
             <div>loading...</div>
         )

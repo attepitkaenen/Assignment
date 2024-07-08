@@ -1,14 +1,7 @@
 "use client";
 
-import { useAppDispatch, useAppSelector } from "@/store/hooks";
-import {
-  getRestaurants,
-  RestaurantState,
-  selectRestaurantById,
-  selectRestaurants,
-} from "@/store/slices/restaurantSlice";
-import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useGetRestaurantByIdQuery } from "@/store/api/restaurantApi";
+import React from "react";
 
 const cleanTypeText = (type: string) => {
   let result = type.charAt(0).toUpperCase() + type.slice(1);
@@ -19,19 +12,8 @@ const cleanTypeText = (type: string) => {
 
 export default function RestaurantDetail({ params }: { params: { restaurantId: string } }) {
 
-  const restaurant = useAppSelector((state) =>
-    selectRestaurantById(state, params.restaurantId)
-  );
-  const restaurants = useSelector((state: RestaurantState) => state.restaurants);
+  const { data: restaurant, error, isLoading } = useGetRestaurantByIdQuery(params.restaurantId);
   
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    if (restaurants.length === 0) {
-      dispatch(getRestaurants());
-    }
-  }, [ restaurants.length]);
-
 
   return (
     <div className="m-4 p-4 bg-neutral-800 rounded">

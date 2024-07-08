@@ -1,15 +1,19 @@
 import { configureStore } from "@reduxjs/toolkit";
-import restaurantReducer from "./slices/restaurantSlice";
+import { restaurantApi } from "./api/restaurantApi";
+
 
 export const makeStore = () => {
-    return configureStore({
-      reducer: restaurantReducer,
-    });
+  return configureStore({
+    reducer: {
+      // Add the API reducer
+      [restaurantApi.reducerPath]: restaurantApi.reducer,
+    },
+    // Adding the api middleware enables caching, invalidation, polling, and other features of RTK Query
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware().concat(restaurantApi.middleware),
+  });
 };
 
-// if you add new slices use combineSlices(slice1, slice2) instead of restaurantSlice
-const rootReducer = restaurantReducer;
-export type RootState = ReturnType<typeof rootReducer>;
 // Infer the return type of `makeStore`
 export type AppStore = ReturnType<typeof makeStore>;
 // Infer the `AppDispatch` type from the store itself
