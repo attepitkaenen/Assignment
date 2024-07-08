@@ -11,7 +11,7 @@ export default function Restaurants() {
     return (
         restaurants ?
         (
-        <div className='grid grid-cols-2 gap-2 p-2'>
+        <div className='grid grid-cols-2 gap-2 p-2 lg:grid-cols-4 lg:px-24 lg:gap-4'>
             {restaurants.map((restaurant) => (
                 <RestaurantCard key={restaurant.id} restaurant={restaurant}/>
             ))}

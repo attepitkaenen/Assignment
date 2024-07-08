@@ -4,5 +4,13 @@ export type Restaurant = {
     displayName: {
       text: string,
       languageCode: string
+    },
+    editorialSummary: {
+        text: string,
+        languageCode: string
+    },
+    currentOpeningHours: {
+        openNow: boolean,
+        weekdayDescriptions: string[]
     }
 }

@@ -4,7 +4,11 @@ export const Restaurant = Type.Object({
     id: Type.String(),
     types: Type.Array(Type.String()),
     displayName: Type.Object({ text: Type.String(), languageCode: Type.String() }),
-    editorialSummary: Type.Optional(Type.Object({ text: Type.String(), languageCode: Type.String() }))
+    editorialSummary: Type.Optional(Type.Object({ text: Type.String(), languageCode: Type.String() })),
+    currentOpeningHours: Type.Optional(Type.Object({ 
+        openNow: Type.Boolean(), 
+        weekdayDescriptions: Type.Optional(Type.Array(Type.String()))
+    }))
 })
 
 export const RestaurantArray = Type.Array(Restaurant)

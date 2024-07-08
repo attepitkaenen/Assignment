@@ -5,13 +5,13 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const restaurantApi = createApi({
 reducerPath: 'restaurantApi',
-baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:4000/' }),
+baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3333/api' }),
 endpoints: (builder) => ({
   getRestaurants: builder.query<Restaurant[], void>({
-    query: () => 'places',
+    query: () => 'restaurants',
   }),
   getRestaurantById: builder.query<Restaurant, string>({
-    query: (id) =>`places/${id}`
+    query: (id) =>`restaurants/${id}`
   })
 }),
 });

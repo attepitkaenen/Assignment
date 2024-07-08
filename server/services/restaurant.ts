@@ -16,8 +16,8 @@ const getAllRestaurants = async () => {
                     "locationRestriction": {
                       "circle": {
                         "center": {
-                          "latitude": 37.7937,
-                          "longitude": -122.3965},
+                          "latitude": 59.325665364,
+                          "longitude": 18.056499774},
                         "radius": 500.0
                       }
                     }
@@ -25,7 +25,7 @@ const getAllRestaurants = async () => {
                   headers: {
                     'Content-Type': 'application/json',
                     'X-Goog-Api-Key': 'AIzaSyC3RfG3w1CfXIx6RTs565y_PHkClo6zJg8',
-                    'X-Goog-FieldMask': 'places.id,places.displayName,places.types,places.editorialSummary'
+                    'X-Goog-FieldMask': 'places.id,places.displayName,places.types,places.editorialSummary,places.currentOpeningHours'
                   }
             })
             .json();
@@ -43,7 +43,7 @@ const getRestaurantById = async (id: string) => {
                   headers: {
                     'Content-Type': 'application/json',
                     'X-Goog-Api-Key': 'AIzaSyC3RfG3w1CfXIx6RTs565y_PHkClo6zJg8',
-                    'X-Goog-FieldMask': 'id,displayName,types,editorialSummary'
+                    'X-Goog-FieldMask': 'id,displayName,types,editorialSummary,currentOpeningHours'
                   }
             })
             .json();
