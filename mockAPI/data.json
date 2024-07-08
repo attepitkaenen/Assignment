@@ -1,160 +1,191 @@
-{
-    "places": [
-      {
-        "id": "ChIJURDKN2eAhYARN0AMzUEaiKo",
-        "types": [
-          "seafood_restaurant",
-          "restaurant",
-          "food",
-          "point_of_interest",
-          "establishment"
-        ],
-        "displayName": {
-          "text": "La Mar Cocina Peruana",
-          "languageCode": "en"
-        }
-      },
-      {
-        "id": "ChIJTel9dGCAhYARQGwrTfGZ07M",
-        "types": [
-          "greek_restaurant",
-          "meal_takeaway",
-          "restaurant",
-          "food",
-          "point_of_interest",
-          "establishment"
-        ],
-        "displayName": {
-          "text": "Kokkari Estiatorio",
-          "languageCode": "en"
-        }
-      },
-      {
-        "id": "ChIJZ1SMEQeBhYAR8Y0suKMr48o",
-        "types": [
-          "chinese_restaurant",
-          "banquet_hall",
-          "seafood_restaurant",
-          "meal_takeaway",
-          "restaurant",
-          "food",
-          "event_venue",
-          "point_of_interest",
-          "establishment"
-        ],
-        "displayName": {
-          "text": "Harborview Restaurant & Bar",
-          "languageCode": "en"
-        }
-      },
-      {
-        "id": "ChIJWTGPjmaAhYARgXpiJ-aACYM",
-        "types": [
-          "seafood_restaurant",
-          "bar",
-          "restaurant",
-          "food",
-          "point_of_interest",
-          "establishment"
-        ],
-        "displayName": {
-          "text": "Hog Island Oyster Co.",
-          "languageCode": "en"
-        }
-      },
-      {
-        "id": "ChIJDzBboWOAhYARKT5j0sGvFDU",
-        "types": [
-          "mediterranean_restaurant",
-          "restaurant",
-          "food",
-          "point_of_interest",
-          "establishment"
-        ],
-        "displayName": {
-          "text": "Barcha Restaurant",
-          "languageCode": "en"
-        }
-      },
-      {
-        "id": "ChIJqVjXkGGAhYAR5X80yCKz9Wo",
-        "types": [
-          "seafood_restaurant",
-          "historical_landmark",
-          "american_restaurant",
-          "bar",
-          "restaurant",
-          "food",
-          "point_of_interest",
-          "establishment"
-        ],
-        "displayName": {
-          "text": "Tadich Grill",
-          "languageCode": "en"
-        }
-      },
-      {
-        "id": "ChIJ1aUl92KAhYARTY_D5x-dTnE",
-        "types": [
-          "chinese_restaurant",
-          "restaurant",
-          "food",
-          "point_of_interest",
-          "establishment"
-        ],
-        "displayName": {
-          "text": "Yank Sing (Stevenson St.)",
-          "languageCode": "en"
-        }
-      },
-      {
-        "id": "ChIJE_x2VGSAhYARoXDSoUvUjkI",
-        "types": [
-          "chinese_restaurant",
-          "restaurant",
-          "food",
-          "point_of_interest",
-          "establishment"
-        ],
-        "displayName": {
-          "text": "Yank Sing (Spear St.)",
-          "languageCode": "en"
-        }
-      },
-      {
-        "id": "ChIJzcayqEyBhYARyvjdWRk5_0E",
-        "types": [
-          "steak_house",
-          "seafood_restaurant",
-          "american_restaurant",
-          "night_club",
-          "bar",
-          "restaurant",
-          "food",
-          "event_venue",
-          "point_of_interest",
-          "establishment"
-        ],
-        "displayName": {
-          "text": "STK Steakhouse",
-          "languageCode": "en"
-        }
-      },
-      {
-        "id": "ChIJU00uDM6BhYAR_ZOluZ0m4qA",
-        "types": [
-          "restaurant",
-          "seafood_restaurant",
-          "italian_restaurant",
-          "bar",
-          "food",
-          "point_of_interest",
-          "establishment"
-        ],
-        "displayName": {
-          "text": "Bar Sprezzatura",
-          "languageCode": "en"
-        }
-      }
-    ]
+
+[
+  {
+    "id": "ChIJURDKN2eAhYARN0AMzUEaiKo",
+    "types": [
+      "seafood_restaurant",
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "displayName": {
+      "text": "La Mar Cocina Peruana",
+      "languageCode": "en"
+    },
+    "editorialSummary": {
+      "text": "Celeb chef Gastón Acurio serves Peruvian seafood in a large, partially outdoor space on the pier.",
+      "languageCode": "en"
+    }
+  },
+  {
+    "id": "ChIJTel9dGCAhYARQGwrTfGZ07M",
+    "types": [
+      "greek_restaurant",
+      "meal_takeaway",
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "displayName": {
+      "text": "Kokkari Estiatorio",
+      "languageCode": "en"
+    },
+    "editorialSummary": {
+      "text": "Taverna-inspired cuisine served in a candlelit, wood-beamed dining room that attracts a chic crowd.",
+      "languageCode": "en"
+    }
+  },
+  {
+    "id": "ChIJZ1SMEQeBhYAR8Y0suKMr48o",
+    "types": [
+      "chinese_restaurant",
+      "seafood_restaurant",
+      "banquet_hall",
+      "meal_takeaway",
+      "event_venue",
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "displayName": {
+      "text": "Harborview Restaurant & Bar",
+      "languageCode": "en"
+    },
+    "editorialSummary": {
+      "text": "Contemporary, family-style outlet serving Cantonese-style dishes with panoramic harbor views.",
+      "languageCode": "en"
+    }
+  },
+  {
+    "id": "ChIJWTGPjmaAhYARgXpiJ-aACYM",
+    "types": [
+      "seafood_restaurant",
+      "bar",
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "displayName": {
+      "text": "Hog Island Oyster Co.",
+      "languageCode": "en"
+    },
+    "editorialSummary": {
+      "text": "Contemporary waterside seafood eatery serving local oysters and clams, plus craft cocktails.",
+      "languageCode": "en"
+    }
+  },
+  {
+    "id": "ChIJDzBboWOAhYARKT5j0sGvFDU",
+    "types": [
+      "mediterranean_restaurant",
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "displayName": {
+      "text": "Barcha Restaurant",
+      "languageCode": "en"
+    },
+    "editorialSummary": {
+      "text": "Modern spot for Mediterranean eats in an upbeat atmosphere, plus happy hour and patio seating.",
+      "languageCode": "en"
+    }
+  },
+  {
+    "id": "ChIJqVjXkGGAhYAR5X80yCKz9Wo",
+    "types": [
+      "seafood_restaurant",
+      "historical_landmark",
+      "bar",
+      "american_restaurant",
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "displayName": {
+      "text": "Tadich Grill",
+      "languageCode": "en"
+    },
+    "editorialSummary": {
+      "text": "Institution for fresh fish and classic cocktails with an old-school setting and a lively atmosphere.",
+      "languageCode": "en"
+    }
+  },
+  {
+    "id": "ChIJ1aUl92KAhYARTY_D5x-dTnE",
+    "types": [
+      "chinese_restaurant",
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "displayName": {
+      "text": "Yank Sing (Stevenson St.)",
+      "languageCode": "en"
+    },
+    "editorialSummary": {
+      "text": "Classic dim sum served from carts is the main draw at this bustling Chinese standby.",
+      "languageCode": "en"
+    }
+  },
+  {
+    "id": "ChIJE_x2VGSAhYARoXDSoUvUjkI",
+    "types": [
+      "chinese_restaurant",
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "displayName": {
+      "text": "Yank Sing (Spear St.)",
+      "languageCode": "en"
+    },
+    "editorialSummary": {
+      "text": "Chinese restaurant in the Rincon Center presenting dim sum in a warm, well appointed dining room.",
+      "languageCode": "en"
+    }
+  },
+  {
+    "id": "ChIJzcayqEyBhYARyvjdWRk5_0E",
+    "types": [
+      "steak_house",
+      "seafood_restaurant",
+      "night_club",
+      "event_venue",
+      "bar",
+      "american_restaurant",
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "displayName": {
+      "text": "STK Steakhouse",
+      "languageCode": "en"
+    }
+  },
+  {
+    "id": "ChIJU00uDM6BhYAR_ZOluZ0m4qA",
+    "types": [
+      "restaurant",
+      "seafood_restaurant",
+      "italian_restaurant",
+      "bar",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "displayName": {
+      "text": "Bar Sprezzatura",
+      "languageCode": "en"
+    }
   }
+]

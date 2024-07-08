@@ -25,7 +25,7 @@ const getAllRestaurants = async () => {
                   headers: {
                     'Content-Type': 'application/json',
                     'X-Goog-Api-Key': 'AIzaSyC3RfG3w1CfXIx6RTs565y_PHkClo6zJg8',
-                    'X-Goog-FieldMask': 'places.id,places.displayName,places.types'
+                    'X-Goog-FieldMask': 'places.id,places.displayName,places.types,places.editorialSummary'
                   }
             })
             .json();
@@ -43,7 +43,7 @@ const getRestaurantById = async (id: string) => {
                   headers: {
                     'Content-Type': 'application/json',
                     'X-Goog-Api-Key': 'AIzaSyC3RfG3w1CfXIx6RTs565y_PHkClo6zJg8',
-                    'X-Goog-FieldMask': 'id,displayName,types'
+                    'X-Goog-FieldMask': 'id,displayName,types,editorialSummary'
                   }
             })
             .json();
