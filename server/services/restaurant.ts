@@ -55,20 +55,37 @@ const getRestaurantById = async (id: string) => {
 
 export const restaurantRoutes = async (app: FastifyInstance) => {
     app.get<{ Reply: RestaurantArrayType }>("/", {schema: { response: { 200:  RestaurantArray } } }, async (request: FastifyRequest, reply: FastifyReply) => {
-        const res = await getAllRestaurants();
-
-        if (!res) {
-            reply.status(404)
-        }
-        else {
-            reply.status(200).send(res.places);
+        try {
+            const res = await getAllRestaurants();
+    
+            if (!res) {
+                reply.status(404)
+            }
+            else {
+                reply.status(200).send(res.places);
+            }
+        } 
+        catch {
+            reply.status(423)
         }
     })
     
     app.get<{ Reply: RestaurantType }>("/:id", {schema: { response: { 200: Restaurant } } }, async (request: FastifyRequest, reply: FastifyReply) => {
         const query = request.params as any;
-        const res = await getRestaurantById(query.id);
 
-        reply.status(200).send(res);
+        try {
+            const res = await getRestaurantById(query.id);
+
+            if (!res) {
+                reply.status(404)
+            }
+            else {
+                reply.status(200).send(res);
+            }
+        }
+        catch {
+            reply.status(423)
+        }
+
     })
 }

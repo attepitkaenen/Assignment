@@ -1,4 +1,3 @@
-
 import { Restaurant } from '@/app/types/restaurant';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
@@ -8,11 +7,17 @@ reducerPath: 'restaurantApi',
 baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_RESTAURANT_API_URL }),
 endpoints: (builder) => ({
   getRestaurants: builder.query<Restaurant[], void>({
-    query: () => 'restaurants',
+    query: () => ({
+      url : '/restaurants',
+      method : 'get'
+    })
   }),
   getRestaurantById: builder.query<Restaurant, string>({
-    query: (id) =>`restaurants/${id}`
-  })
+    query: (id) =>( {
+      url: `/restaurants/${id}`,
+      method: 'get'
+    })
+   })
 }),
 });
 
